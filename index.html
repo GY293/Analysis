@@ -241,7 +241,7 @@ footer{margin-top:56px;font-family:var(--sans);font-size:13px;color:var(--muted)
 <div class="courseflow" id="homeFlow"></div>
 <ul>
   <li><strong>Foundations (1–3).</strong> ℝ has no holes (supremum axiom) → so monotone bounded sequences converge → so we can add up infinitely many numbers (series) and define \(e^x\).</li>
-  <li><strong>Functions (4–5).</strong> Continuity is defined through sequences. It gives the intermediate value theorem and the existence of max/min. Then exp, ln, powers and sin/cos are built from series.</li>
+  <li><strong>Functions (4–5).</strong> Continuity is defined through sequences. It gives the intermediate value theorem and the existence of max/min. Then ln and general powers come from inverting exp, and sin/cos are defined through \(e^{ix}\).</li>
   <li><strong>Differential calculus (6–7).</strong> The derivative is the best linear approximation (with Landau symbols). The mean value theorem turns derivative information into statements about the function: monotonicity, extrema, l’Hospital.</li>
   <li><strong>Integral calculus (8–9).</strong> The integral is a limit of sums; the fundamental theorem links it to derivatives. Then improper integrals and the comparison between sums and integrals.</li>
   <li><strong>Power series (10).</strong> Taylor polynomials approximate functions to higher order; power series are "infinite polynomials".</li>
@@ -366,7 +366,7 @@ footer{margin-top:56px;font-family:var(--sans);font-size:13px;color:var(--muted)
   <div class="verdict" id="mapOut"></div>
 </div>
 <div class="box ex">
-  <div class="head"><span class="kind">Examples — the codomain matters</span><span class="src">Skript 5.2</span></div>
+  <div class="head"><span class="kind">Examples — the codomain matters</span><span class="src">Skript Bsp. 5.2</span></div>
   <ul>
     <li>\(f:\mathbb R\to\mathbb R,\ x\mapsto x^2\): not injective (\(f(-1)=f(1)\)), not surjective (\(-1\) is never hit).</li>
     <li>\(f:[0,\infty)\to\mathbb R,\ x\mapsto x^2\): injective, still not surjective.</li>
@@ -450,7 +450,7 @@ footer{margin-top:56px;font-family:var(--sans);font-size:13px;color:var(--muted)
   <details class="proof"><summary>Proofs</summary>
     <ol>
       <li>\(a\cdot0=a\cdot(0+0)=a\cdot0+a\cdot0\) (neutral element, then distributivity). Add \(-(a\cdot0)\) to both sides: \(0=a\cdot0\).</li>
-      <li>\(a\cdot b+(-a)\cdot b=(a+(-a))\cdot b=0\cdot b=0\) by rule 1. So \((-a)b\) is the additive inverse of \(ab\): \((-a)b=-(ab)\). With \(a=b=1\) applied twice: \((-1)(-1)=-(1\cdot(-1))=-(-1)=1\).</li>
+      <li>\(a\cdot b+(-a)\cdot b=(a+(-a))\cdot b=0\cdot b=0\) by rule 1. So \((-a)b\) is the additive inverse of \(ab\): \((-a)b=-(ab)\). With \(a=1,\ b=-1\): \((-1)(-1)=-(1\cdot(-1))=-(-1)=1\).</li>
       <li>Suppose \(ab=0\) and \(a\neq0\). Multiply by \(a^{-1}\): \(b=a^{-1}ab=a^{-1}\cdot0=0\).</li>
       <li>\(x=a^{-1}b\) works: \(a\cdot a^{-1}b=b\). If \(x\) and \(y\) both work, \(a(x-y)=0\), so \(x-y=0\) by rule 3.</li>
     </ol>
@@ -515,7 +515,7 @@ footer{margin-top:56px;font-family:var(--sans);font-size:13px;color:var(--muted)
   <li><strong>Sets</strong>: read \(\in,\subseteq,\cup,\cap,\setminus,\times\) and \(\{x\in A:\dots\}\); prove \(A=B\) by showing both inclusions.</li>
   <li><strong>Proofs</strong>: \(A\Rightarrow B\) is not \(B\Rightarrow A\); the contrapositive \(\neg B\Rightarrow\neg A\) is the same statement; contradiction and induction are the other two standard tools.</li>
   <li><strong>Maps</strong>: injective = no collisions, surjective = everything hit, bijective = both = invertible. Domain and codomain are part of the map.</li>
-  <li><strong>Structures</strong>: group (one operation, invertible) ⊂ ring (+, ·, no division) ⊂ field (division by nonzero). ℤ is a ring, ℚ, ℝ, ℂ are fields.</li>
+  <li><strong>Structures</strong>: group (one operation, invertible) → ring (+, ·, no division) → field (division by nonzero), each adding rules to the previous one. ℤ is a ring, ℚ, ℝ, ℂ are fields.</li>
   <li><strong>Consequences</strong> of the field axioms: \(a\cdot0=0\), \((-1)(-1)=1\), \(ab=0\Rightarrow a=0\) or \(b=0\).</li>
   <li><strong>Order</strong>: "positive" with rules (a), (b) ⇒ all inequality rules; multiplying by a negative flips. ℚ, ℝ ordered; ℂ, \(\mathbb Z/p\) not. ℝ = the complete ordered field.</li>
 </ol>
@@ -849,7 +849,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <div class="box warn">
   <div class="head"><span class="kind">Common mistakes</span></div>
   <ul>
-    <li>The supremum always exists (for nonempty bounded sets); the maximum may not. <strong>max exists ⇔ sup ∈ M</strong>, and then max = sup.</li>
+    <li>The supremum always exists (for nonempty bounded sets); the maximum may not. <strong>The max exists ⇔ sup ∈ M</strong>, and then max = sup.</li>
     <li>\(\sup M\) does not have to be an element of \(M\). In \(\{-\frac1n:n\in\mathbb N\}\) the supremum is 0, but no \(-\frac1n\) equals 0 (<span class="src">Skript 1.7</span>).</li>
     <li>"∞ is the supremum" is only a convention. If \(\sup M=\infty\), then the maximum does not exist.</li>
   </ul>
@@ -1118,7 +1118,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <details class="proof"><summary>(a) A norm is never negative</summary>
     <p>Hint from the sheet: look at \(\|x-x\|\).</p>
     \[0\overset{(N1)}=\|0\|=\|x+(-x)\|\overset{(N2)}\le\|x\|+\|-x\|\overset{(N3)}=\|x\|+|-1|\,\|x\|=2\|x\|.\]
-    <p>So \(\|x\|\ge0\). Nice: non-negativity doesn't need to be an axiom, it follows from the other three.</p>
+    <p>So \(\|x\|\ge0\). Nice: non-negativity doesn't need to be an axiom, it follows from (N1)–(N3).</p>
   </details>
 
   <details class="proof"><summary>(b) The Euclidean norm \(\|x\|_2=\sqrt{\langle x,x\rangle}\) is a norm</summary>
@@ -1167,19 +1167,19 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <!-- ============ EXAM ============ -->
 <section id="c1-exam">
 <h2 data-toc="For the exam"><span class="num">!</span>What the exam asks from Chapter 1</h2>
-<p>I went through all nine uploaded exams (WiSe18 – WiSe24). Chapter 1 appears in six of them, and almost always in the same form. Here is the complete list:</p>
+<p>I went through all nine uploaded exams (WiSe18 – WiSe24). Chapter 1 appears in five of them, and almost always in the same form. Here is the complete list:</p>
 <div class="tbl"><table class="t">
   <thead><tr><th>Exam</th><th>Task</th><th>Type</th></tr></thead>
   <tbody>
     <tr><td>SoSe19 A1 (10 P)</td><td>sup, inf, max, min of three sets: \(\{n\in\mathbb N:n^2=(2k-1)n\text{ for some }k\}\), \(\{x:x^2-1&gt;0\}\), \(\{x:|x-1|-1&lt;0\}\)</td><td>sup/inf</td></tr>
-    <tr><td>WiSe19 1a</td><td>sup, inf, max, min of \(\{\frac n{n+2}:n\in\mathbb N\}\)</td><td>sup/inf</td></tr>
+    <tr><td>WiSe19 1a</td><td>sup and min of \(\{\frac n{n+2}:n\in\mathbb N\}\)</td><td>sup/inf</td></tr>
     <tr><td>WiSe20 1b</td><td>sup, inf, max, min of \(\{\frac{n+1}n:n\in\mathbb N\}\)</td><td>sup/inf</td></tr>
     <tr><td>SoSe23 1d</td><td>\(\inf\) and \(\sup\) of \(a_n=e^{1/n}+e^{-1/n}\)</td><td>sup/inf</td></tr>
     <tr><td>WiSe18 A5 (8 P)</td><td>\(\sup(f+g)\le\sup f+\sup g\), with an example of strict inequality</td><td>sup proof</td></tr>
     <tr><td>WiSe19 1f</td><td>determine \(\{z\in\mathbb C:z=|z|^2\}\)</td><td>complex numbers</td></tr>
   </tbody>
 </table></div>
-<p><strong>Conclusion:</strong> the one skill you must have cold is <em>determining and justifying sup, inf, max and min</em>. Countability, Cantor, Archimedes and the inequalities are not asked as standalone tasks — but Archimedes and the triangle inequality are used inside nearly every ε-proof of Chapter 2, so you need them anyway. The three tasks not yet worked above follow.</p>
+<p><strong>Conclusion:</strong> the one skill you must have cold is <em>determining and justifying sup, inf, max and min</em>. Countability, Cantor, Archimedes and the inequalities are not asked as standalone tasks — but Archimedes and the triangle inequality are used inside nearly every ε-proof of Chapter 2, so you need them anyway. The four tasks not yet worked above follow (the other exam sets are worked in the explorer).</p>
 
 <div class="box exam">
   <div class="head"><span class="kind">Exam question</span><span class="src exam">Klausur SoSe19 · A1a</span></div>
@@ -1211,7 +1211,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 
 <div class="box exam">
   <div class="head"><span class="kind">Exam question</span><span class="src exam">Klausur WiSe18 · A5</span></div>
-  <p>Let \(f,g:D\to\mathbb R\) be bounded. (a) If \(f=g\), then \(\sup(f+g)=\sup f+\sup g\). (b) Give an example with \(\sup(f+g)&lt;\sup f+\sup g\). (c) Show that always \(\sup_{x\in D}(f(x)+g(x))\le\sup_{x\in D}f(x)+\sup_{x\in D}g(x)\).</p>
+  <p>Let \(f,g:D\to\mathbb R\) be bounded. (a) If \(\sup_{x\in D}|f(x)-g(x)|=0\), i.e. \(f=g\), then \(\sup(f+g)=\sup f+\sup g\). (b) Give an example with \(\sup(f+g)&lt;\sup f+\sup g\). (c) Show that always \(\sup_{x\in D}(f(x)+g(x))\le\sup_{x\in D}f(x)+\sup_{x\in D}g(x)\).</p>
   <details class="proof"><summary>Solution</summary>
     <p>Notation: \(\sup_{x\in D}f(x)\) means the supremum of the set of values \(\{f(x):x\in D\}\).</p>
     <p><strong>(c) first, because it is the heart.</strong> Take any \(x\in D\). Since \(\sup f\) is an upper bound of all values of \(f\), \(f(x)\le\sup f\); likewise \(g(x)\le\sup g\). Adding: \(f(x)+g(x)\le\sup f+\sup g\). This holds for <em>every</em> \(x\), so \(\sup f+\sup g\) is an upper bound of \(\{f(x)+g(x):x\in D\}\). The supremum is the <em>least</em> upper bound, hence \(\sup(f+g)\le\sup f+\sup g\). ∎</p>
@@ -1275,7 +1275,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 </table></div>
 
 <h3>Exam focus</h3>
-<p>Sup/inf/max/min of a set is the Chapter 1 exam task (six of nine exams, see "What the exam asks" above). Every exam set is in the explorer and fully worked on this page.</p>
+<p>Sup/inf/max/min of a set is the Chapter 1 exam task (five of nine exams, see "What the exam asks" above). Every exam set is in the explorer and fully worked on this page.</p>
 <div class="box method">
   <div class="head"><span class="kind">Exam checklist for sup/inf tasks</span></div>
   <ol class="steps">
@@ -1296,7 +1296,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <div class="widget" id="quizW" style="border-color:var(--line)"></div>
 </section>
 
-<footer>Based on the lecture notes <em>Analysis für Informatik (MA0902)</em>, Silke Rolles, TUM, Chapter 1, and Aufgabenblatt 1 (WiSe 2025/26), plus the exams WiSe19, WiSe20, SoSe19, SoSe23. Personal study summary, not official course material.</footer>
+<footer>Based on the lecture notes <em>Analysis für Informatik (MA0902)</em>, Silke Rolles, TUM, Chapter 1, and Aufgabenblatt 1 (WiSe 2025/26), plus the exams WiSe18, WiSe19, WiSe20, SoSe19, SoSe23. Personal study summary, not official course material.</footer>
 </section>
 
 <section class="page" id="ch02" hidden>
@@ -1428,7 +1428,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   </ol>
   <p class="small">Special case of (d) with \(a_n=1\): \(\lim\frac1{b_n}=\frac1b\) if \(b\neq0\).</p>
   <details class="proof"><summary>Proofs (the script states them without proof)</summary>
-    <p><span class="src extra">Extra</span> All four use the same two tools from Chapter 1: the triangle inequality, and "a convergent sequence is bounded" (Satz 2.12 below).</p>
+    <p><span class="src extra">Extra</span> All four use the same two tools: the triangle inequality from Chapter 1, and "a convergent sequence is bounded" (Satz 2.12 below).</p>
     <p><strong>(a) Sum.</strong> Given \(\varepsilon&gt;0\), choose \(n_1\) with \(|a_n-a|&lt;\frac\varepsilon2\) for \(n\ge n_1\) and \(n_2\) with \(|b_n-b|&lt;\frac\varepsilon2\) for \(n\ge n_2\). For \(n\ge\max(n_1,n_2)\):
     \[|(a_n+b_n)-(a+b)|\le|a_n-a|+|b_n-b|&lt;\tfrac\varepsilon2+\tfrac\varepsilon2=\varepsilon.\]</p>
     <p><strong>(b)</strong> is (c) with the constant sequence \(b_n=c\).</p>
@@ -1454,7 +1454,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 
 <div class="widget" id="c2-dom">
   <div class="wtitle">Try it · why only the biggest power matters</div>
-  <p>Pick a quotient and slide \(n\) up. The bars show how much of the numerator and of the denominator each term contributes. As \(n\) grows, the highest power swallows everything else — which is exactly why "divide by the highest power" works, and why \(a_n\simeq\) (leading term)/(leading term).</p>
+  <p>Pick a quotient and slide \(n\) up. The bars show how much of the numerator and of the denominator each term contributes. As \(n\) grows, the highest power swallows everything else — which is exactly why "divide by the highest power" works, and why \(a_n\simeq\) (leading term)/(leading term) (\(\simeq\) is asymptotic equality, defined below).</p>
   <div class="controls">
     <label for="c2-domSel">quotient</label><select id="c2-domSel"></select>
     <label for="c2-domN">n = <b class="v" id="c2-domNV">10</b><input type="range" id="c2-domN" min="0" max="600" value="100"></label>
@@ -1527,7 +1527,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <details class="proof"><summary>(d) \(nq^n\to0\) for \(|q|&lt;1\)</summary>
     <p>For \(q=0\) trivial. Otherwise write \(|q|=\frac1{1+p}\) with \(p&gt;0\). Binomial theorem, keep only the \(p^2\) term:
     \[|q|^n=\frac1{(1+p)^n}\le\frac1{\binom n2p^2}=\frac{2}{p^2\,n(n-1)}\quad\Rightarrow\quad n|q|^n\le\frac2{p^2}\cdot\frac1{n-1}\to0.\]
-    Linear growth \(n\) loses against exponential decay \(q^n\). (Chapter 5 generalises: \(n^mq^n\to0\) for every \(m\).)</p>
+    Linear growth \(n\) loses against exponential decay \(q^n\). (The same holds for \(n^mq^n\) with any fixed \(m\); it follows from "exp beats every power", Satz 5.6 in Chapter 5.)</p>
   </details>
   <details class="proof"><summary>(e) \(\sqrt{b_n}\to\sqrt b\)</summary>
     <p>Key inequality: \(|\sqrt b-\sqrt{b_n}|\le\sqrt{|b-b_n|}\). (Check for \(b_n\le b\): square both sides; it reduces to \(b_n\le\sqrt{b_nb}\), true.) Given ε, choose \(N\) with \(|b_n-b|\le\varepsilon^2\) for \(n\ge N\). Then \(|\sqrt{b_n}-\sqrt b|\le\varepsilon\). <span class="qed">∎</span> (Later, in Chapter 4, this is just "√ is continuous".)</p>
@@ -1662,7 +1662,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 </div>
 <div class="widget" id="c2-heron">
   <div class="wtitle">Try it · Heron's method</div>
-  <p>Start value and number to take the root of. The number of correct digits roughly doubles in every step.</p>
+  <p>Choose the number whose square root you want and the start value \(a_0\). The number of correct digits roughly doubles in every step.</p>
   <div class="controls">
     <label for="c2-hS">√ of <b class="v" id="c2-hSV">2</b><input type="range" id="c2-hS" min="2" max="50" value="2"></label>
     <label for="c2-h0">a₀ = <b class="v" id="c2-h0V">1</b><input type="range" id="c2-h0" min="1" max="40" value="1"></label>
@@ -1688,7 +1688,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <h3 id="c2-tools" data-toc="Bernoulli, binomial, geometric">Three tools: Bernoulli, binomial theorem, geometric sum</h3>
 <div class="box def">
   <div class="head"><span class="kind">First: what "by induction" means</span><span class="src extra">Extra</span></div>
-  <p>The script proves the next three statements "mit vollständiger Induktion" without explaining the method, and it is used again in Chapters 5, 6, 8 and 10. <strong>Induction</strong> <span class="de-term">[vollständige Induktion]</span> proves a statement \(A(n)\) for <em>every</em> \(n\in\mathbb N\) in two steps:</p>
+  <p>The script proves Bernoulli's inequality below "mit vollständiger Induktion" without explaining the method, and induction is used again in Chapters 5, 6, 8 and 10. <strong>Induction</strong> <span class="de-term">[vollständige Induktion]</span> proves a statement \(A(n)\) for <em>every</em> \(n\in\mathbb N\) in two steps:</p>
   <ol class="steps">
     <li><strong>Base case</strong> <span class="de-term">[Induktionsanfang]</span>: show \(A(n_0)\) for the smallest \(n_0\) (often 0 or 1).</li>
     <li><strong>Induction step</strong> <span class="de-term">[Induktionsschritt]</span>: show that <em>if</em> \(A(n)\) holds (the <strong>induction hypothesis</strong> <span class="de-term">[Induktionsvoraussetzung]</span>), <em>then</em> \(A(n+1)\) holds.</li>
@@ -1859,7 +1859,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <div class="head"><span class="kind">Exam question</span><span class="src exam">Klausur WiSe19 · 1c</span></div>
   <p>Compute \(\lim_{n\to\infty}n^7\sin(3^{-n})\). (Only the result counted: 0.)</p>
   <details class="proof"><summary>Why 0</summary>
-    <p>Use \(|\sin x|\le|x|\) (see Chapter 5): \(0\le|n^7\sin(3^{-n})|\le\frac{n^7}{3^n}\). And \(\frac{n^7}{3^n}=n^7q^n\) with \(q=\frac13\) goes to 0, because exponential decay beats every power of \(n\) (Blatt 3.1d idea, done in general in Chapter 5). Squeeze theorem ⇒ 0.</p>
+    <p>Use \(|\sin x|\le|x|\) (it follows from the mean value theorem in Chapter 7, since \(|\cos|\le1\)): \(0\le|n^7\sin(3^{-n})|\le\frac{n^7}{3^n}\). And \(\frac{n^7}{3^n}=n^7q^n\) with \(q=\frac13\) goes to 0, because exponential decay beats every power of \(n\) (Blatt 3.1d idea; in general it follows from Satz 5.6 in Chapter 5). Squeeze theorem ⇒ 0.</p>
   </details>
 </div>
 </section>
@@ -1875,7 +1875,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <header class="top">
   <div class="eyebrow">Analysis für Informatik · MA0902 · Chapter 3</div>
   <h1>Series<span class="de">Reihen</span></h1>
-  <p class="lede">A series is what you get when you keep adding the terms of a sequence: \(a_1+a_2+a_3+\dots\) This chapter explains when such an infinite sum has a value, gives you a toolbox of <strong>convergence tests</strong> (the most frequent exam topic of the whole course), warns you about <strong>rearranging</strong> infinite sums, and uses all of it to define the <strong>exponential function</strong>.</p>
+  <p class="lede">A series is what you get when you keep adding the terms of a sequence: \(a_1+a_2+a_3+\dots\). This chapter explains when such an infinite sum has a value, gives you a toolbox of <strong>convergence tests</strong> (the most frequent exam topic of the whole course), warns you about <strong>rearranging</strong> infinite sums, and uses all of it to define the <strong>exponential function</strong>.</p>
   <p class="legend">Source labels: <span class="src">Skript 3.2</span> = stated in your lecture script · <span class="src sheet">Blatt 4 · 4.2</span> = exercise sheet · <span class="src exam">Klausur WiSe20</span> = old exam · <span class="src extra">Extra</span> = my own addition (intuition, a proof the script leaves out, or an extra example). A <b>§</b> marks a whole <em>section</em> of the script (§3.4 = Section 3.4) rather than a numbered result (3.4 = Lemma 3.4).</p>
 </header>
 
@@ -1909,7 +1909,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p>\(\displaystyle\sum_{k=1}^n a_k\) is shorthand for \(a_1+a_2+\dots+a_n\): let \(k\) run from the lower number to the upper one and add up. The letter \(k\) is a placeholder <span class="de-term">[Summationsindex]</span>; \(\sum_{k=1}^3k^2=\sum_{j=1}^3j^2=1+4+9\).</p>
   <p><strong>Index shift</strong> <span class="de-term">[Indexverschiebung]</span>: substituting \(j=k-1\) moves both limits: \(\sum_{k=1}^{n}a_k=\sum_{j=0}^{n-1}a_{j+1}\). The same list of numbers is added, only the counter is renamed. The script uses this constantly (e.g. in the proof of Satz 2.21 and in 3.23).</p>
 </div>
-<p><strong>Why an infinite sum needs a definition at all.</strong> You cannot actually perform infinitely many additions. Picture walking towards a wall 1 m away, each step covering half of the remaining distance: \(\frac12+\frac14+\frac18+\dots\) After \(n\) steps you have walked \(s_n=1-\frac1{2^n}\) metres. You never "finish", but the numbers \(s_n\) approach 1, so it is natural to say the infinite sum <em>is</em> 1. That is exactly the definition: add finitely many terms, then take the limit.</p>
+<p><strong>Why an infinite sum needs a definition at all.</strong> You cannot actually perform infinitely many additions. Picture walking towards a wall 1 m away, each step covering half of the remaining distance: \(\frac12+\frac14+\frac18+\dots\). After \(n\) steps you have walked \(s_n=1-\frac1{2^n}\) metres. You never "finish", but the numbers \(s_n\) approach 1, so it is natural to say the infinite sum <em>is</em> 1. That is exactly the definition: add finitely many terms, then take the limit.</p>
 <div class="box def">
   <div class="head"><span class="kind">Definition</span><span class="src">Skript 3.1</span></div>
   <p>Let \((a_n)\) be a sequence of complex numbers and \(s_n=\sum_{k=1}^na_k\) the \(n\)-th <strong>partial sum</strong> <span class="de-term">[Partialsumme]</span>. The sequence \((s_n)\) is called an <strong>infinite series</strong> <span class="de-term">[unendliche Reihe]</span>, written \(\sum_{k=1}^\infty a_k\).</p>
@@ -2029,7 +2029,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p>(a) If \(\sum x_k\) converges with \(x_k&gt;0\), then \(\sum\frac1{x_k}\) diverges. (b) The converse is false.</p>
   <details class="proof"><summary>Solution</summary>
     <p>(a) By Lemma 3.4, \(x_k\to0\), so \(\frac1{x_k}\to\infty\) (for every \(M\), eventually \(x_k&lt;\frac1M\), i.e. \(\frac1{x_k}&gt;M\)). The terms of \(\sum\frac1{x_k}\) don't tend to 0 ⇒ divergent.</p>
-    <p>(b) \(y_k=\sqrt k\): \(\sum\sqrt k\) diverges (terms ↛ 0) and \(\sum\frac1{\sqrt k}\) diverges too (minorant \(\frac1k\), see below).</p>
+    <p>(b) \(x_k=\sqrt k\): \(\sum\sqrt k\) diverges (terms ↛ 0) and \(\sum\frac1{\sqrt k}\) diverges too (minorant \(\frac1k\), see below).</p>
   </details>
 </div>
 <div class="box exam">
@@ -2058,7 +2058,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p class="small">In words: <em>smaller than something convergent ⇒ convergent; larger than something divergent ⇒ divergent.</em> (The inequality only needs to hold for \(k\ge k_0\).) Picture two non-negative series as two staircases of partial sums, one always above the other: if the upper one stays below a ceiling, so does the lower one; if the lower one climbs to ∞, so does the upper one.</p>
   <details class="proof"><summary>Proof <span class="src extra">Extra — the script proves only part (b)</span></summary>
   <p><strong>(a) for real \(a_k\ge0\):</strong> here \(|a_k|=a_k\le b_k\), so the partial sums satisfy \(\sum_{k=1}^na_k\le\sum_{k=1}^nb_k\le\sum_{k=1}^\infty b_k=:B\) (the last step because a series with non-negative terms increases towards its value). So the partial sums of \(\sum a_k\) are increasing and bounded by \(B\), hence convergent by Satz 3.6, and the limit is \(\le B\).</p>
-  <p><strong>(a) in general:</strong> apply the previous paragraph to \(|a_k|\) (which satisfies \(0\le|a_k|\le b_k\)): \(\sum|a_k|\) converges. Now split \(a_k\) into non-negative pieces. For real \(a_k\) put \(a_k^+=\max(a_k,0)\) and \(a_k^-=\max(-a_k,0)\); both are \(\ge0\) and \(\le|a_k|\), so \(\sum a_k^+\) and \(\sum a_k^-\) converge by the non-negative case, and \(\sum a_k=\sum a_k^+-\sum a_k^-\) converges by Satz 3.20. For complex \(a_k\) apply this to real and imaginary parts, using \(|\operatorname{Re}a_k|\le|a_k|\) and \(|\operatorname{Im}a_k|\le|a_k|\). (This is also the proof of the statement in Bemerkung 3.9 that every absolutely convergent series converges.) The estimate \(|\sum a_k|\le\sum|a_k|\) is the triangle inequality for each partial sum (Satz 1.12), carried to the limit with Satz 2.13.</p>
+  <p><strong>(a) in general:</strong> apply the previous paragraph to \(|a_k|\) (which satisfies \(0\le|a_k|\le b_k\)): \(\sum|a_k|\) converges. Now split \(a_k\) into non-negative pieces. For real \(a_k\) put \(a_k^+=\max(a_k,0)\) and \(a_k^-=\max(-a_k,0)\); both are \(\ge0\) and \(\le|a_k|\), so \(\sum a_k^+\) and \(\sum a_k^-\) converge by the non-negative case, and \(\sum a_k=\sum a_k^+-\sum a_k^-\) converges by Satz 3.20. For complex \(a_k\) apply this to real and imaginary parts, using \(|\operatorname{Re}a_k|\le|a_k|\) and \(|\operatorname{Im}a_k|\le|a_k|\). (This is also the proof of the statement in Bemerkung 3.9 that every absolutely convergent series converges.) The estimate \(|\sum a_k|\le\sum|a_k|\) is the triangle inequality for each partial sum (Satz 1.12; Satz 1.14 for complex numbers), carried to the limit with Satz 2.13.</p>
   <p><strong>(b)</strong> is (a) read backwards: if \(\sum b_k\) converged, (a) would make \(\sum|a_k|\) converge, contradicting the assumption. ∎</p>
   </details>
 </div>
@@ -2160,7 +2160,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 </div>
 <div class="widget" id="c3-ratioW">
   <div class="wtitle">Try it · watch the ratios</div>
-  <p>Dots: \(\left|\frac{a_{k+1}}{a_k}\right|\) for \(k=1,2,\dots\) The test only looks at where the dots end up (their limit \(q\), dashed), compared with the line at 1. Early dots do not matter — see the exponential series with \(x=5\).</p>
+  <p>Dots: \(\left|\frac{a_{k+1}}{a_k}\right|\) for \(k=1,2,\dots\). The test only looks at where the dots end up (their limit \(q\), dashed), compared with the line at 1. Early dots do not matter — see the exponential series with \(x=5\).</p>
   <div class="controls">
     <label for="c3-ratSel">series</label><select id="c3-ratSel" style="max-width:100%"></select>
   </div>
@@ -2424,9 +2424,9 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 
 <div class="box exam">
   <div class="head"><span class="kind">Exam question</span><span class="src exam">Klausur WiSe22 · 1c</span></div>
-  <p>Determine \(M_1=\{x\in\mathbb R:\ S_1(x)=\sum_{k=0}^\infty2^{2k}4^kx^k\text{ converges}\}\) and the value \(S_1(x)\).</p>
+  <p>Determine \(M_1=\{x\in\mathbb R:\ S_1(x)=\sum_{k=0}^\infty4^{2k}x^k\text{ converges}\}\) and the value \(S_1(x)\).</p>
   <details class="proof"><summary>Solution</summary>
-    <p><strong>Recognise the pattern.</strong> \(2^{2k}4^kx^k=4^k\cdot4^k\cdot x^k=(16x)^k\). So \(S_1(x)=\sum_{k\ge0}z^k\) with \(z=16x\): a geometric series.</p>
+    <p><strong>Recognise the pattern.</strong> \(4^{2k}x^k=(4^2)^kx^k=(16x)^k\). So \(S_1(x)=\sum_{k\ge0}z^k\) with \(z=16x\): a geometric series.</p>
     <p><strong>Cases.</strong> \(|16x|&lt;1\): converges to \(\frac1{1-16x}\) (Lemma 3.2). \(|16x|\ge1\): \(|(16x)^k|\ge1\), the terms do not tend to 0, so it diverges (Lemma 3.4). Answer: \(M_1=\left(-\frac1{16},\frac1{16}\right)\), \(S_1(x)=\frac1{1-16x}\).</p>
   </details>
 </div>
@@ -2572,7 +2572,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 
 <div class="widget" id="c4-cont">
   <div class="wtitle">Try it · continuity at 0 via sequences</div>
-  <p>The dots are \(f(x_n)\) for \(x_n=\frac1n\) (right) and \(x_n=-\frac1n\) (left). \(f\) is continuous at 0 iff both dot-trails run into the value \(f(0)\) (the hollow/filled marker). For the two exam functions you can choose \(f(0)=a\) yourself.</p>
+  <p>The dots are \(f(x_n)\) for \(x_n=\frac1n\) (right) and \(x_n=-\frac1n\) (left). \(f\) is continuous at 0 iff both dot-trails run into the value \(f(0)\) (the red ring). For the two exam functions you can choose \(f(0)=a\) yourself.</p>
   <div class="controls">
     <label for="c4-f">f</label><select id="c4-f"></select>
     <label for="c4-a" id="c4-aL">a = f(0) = <b class="v" id="c4-aV">1</b><input type="range" id="c4-a" min="-10" max="40" value="10"></label>
@@ -2639,8 +2639,8 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <div class="head"><span class="kind">From the exercise sheet</span><span class="src sheet">Blatt 5 · Abgabeaufgabe 5.2</span></div>
   <p>Find the maximal domain and check continuity.</p>
   <ul>
-    <li>\(\frac{7x^5+13x^4+8x+\pi}{x}\): \(D=\mathbb R\setminus\{0\}\), rational ⇒ continuous on \(D\).</li>
-    <li>\(\frac{\dots}{x^2+1}\): denominator never 0 ⇒ \(D=\mathbb R\), continuous.</li>
+    <li>\(\frac1x\): \(D=\mathbb R\setminus\{0\}\), rational ⇒ continuous on \(D\).</li>
+    <li>\(\frac{7x^5+13x^4+8x+\pi}{x^2+1}\): denominator never 0 ⇒ \(D=\mathbb R\), continuous.</li>
     <li>\(\sqrt x\): \(D=[0,\infty)\); continuous since \(x_n\to x\Rightarrow\sqrt{x_n}\to\sqrt x\) (Blatt 3.1e).</li>
     <li>\(\exp(\sqrt{x^2-9})\): need \(x^2\ge9\), so \(D=(-\infty,-3]\cup[3,\infty)\); composition ⇒ continuous.</li>
     <li>\(f(x)=\lim_{n\to\infty}x^n\): exists only for \(x\in(-1,1]\), with \(f=0\) on \((-1,1)\) and \(f(1)=1\). <strong>Not continuous at 1</strong>: \(x_n=\frac{n-1}n\to1\) but \(f(x_n)=0\). Moral: a pointwise limit of continuous functions (\(x^n\)) need not be continuous.</li>
@@ -2778,7 +2778,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p class="small">Compare with convergence: <em>convergent to a</em> = all but finitely many terms within ε; <em>accumulation point a</em> = infinitely many terms within ε.</p>
 </div>
 <div class="widget" id="c4-hp">
-  <div class="wtitle">Try it · is a an accumulation point? Count the visits</div>
+  <div class="wtitle">Try it · is a given point an accumulation point? Count the visits</div>
   <p>Pick a sequence, a candidate \(a\) and a tolerance ε. Terms inside the band \((a-\varepsilon,a+\varepsilon)\) are highlighted. Accumulation point ⇔ for <em>every</em> ε the band is visited <strong>infinitely often</strong> (Blatt 6.3). Limit ⇔ for every ε <em>all but finitely many</em> terms are inside. Shrink ε and watch whether the visits keep coming.</p>
   <div class="controls">
     <label for="c4-hpS">sequence</label><select id="c4-hpS" style="max-width:100%"></select>
@@ -2806,7 +2806,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <div class="box exam">
   <div class="head"><span class="kind">Exam questions</span><span class="src exam">Klausur WiSe24 1a · SoSe21 1a</span></div>
   <details class="proof"><summary>WiSe24 1a: accumulation points of \(a_n=\frac{n^3(-1)^n}{3+n^3}\)? Convergent?</summary>
-    <p>Divide by \(n^3\): \(a_n=\frac{(-1)^n}{1+3/n^3}\). Even subsequence → 1, odd subsequence → −1. Every index is even or odd, so these are the only accumulation points. Two accumulation points ⇒ not convergent. The official solution warns: naming Leibniz here gives a deduction (that is about series!).</p>
+    <p>Divide by \(n^3\): \(a_n=\frac{(-1)^n}{1+3/n^3}\). Even subsequence → 1, odd subsequence → −1. Every index is even or odd, so these are the only accumulation points. Two accumulation points ⇒ not convergent. The official solution warns: citing Leibniz here costs points (the Leibniz criterion is about series!).</p>
   </details>
   <details class="proof"><summary>SoSe21 1a: accumulation points of \(c_n=e^{i\pi n/2}(1-e^{i\pi n})\)?</summary>
     <p>With \(e^{i\pi/2}=i\) and \(e^{i\pi}=-1\) (Euler, Chapter 5): \(c_n=i^n(1-(-1)^n)=i^n-(-i)^n\). The sequence is periodic with period 4: \(c_{4k-3}=2i,\ c_{4k-2}=0,\ c_{4k-1}=-2i,\ c_{4k}=0\). Accumulation points: \(2i,0,-2i\).</p>
@@ -3187,7 +3187,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p>\(\overline{x+iy}=x-iy\), \(\ \overline{\bar z}=z,\ \overline{z+z'}=\bar z+\bar z',\ \overline{zz'}=\bar z\,\bar z'\), and \(|x+iy|=\sqrt{x^2+y^2}=\sqrt{z\bar z}\) (Blatt 1.3).</p>
 </div>
 <div class="box thm">
-  <div class="head"><span class="kind">|e^{ix}| = 1</span><span class="src">Skript §5.3</span></div>
+  <div class="head"><span class="kind">\(|e^{ix}|=1\)</span><span class="src">Skript §5.3</span></div>
   <p>For real \(x\), conjugating the series term by term gives \(\overline{e^{ix}}=\sum\frac{\overline{(ix)^k}}{k!}=\sum\frac{(-ix)^k}{k!}=e^{-ix}\). Hence
   \[|e^{ix}|^2=e^{ix}\,\overline{e^{ix}}=e^{ix}e^{-ix}=e^0=1.\]
   So \(e^{ix}\) always lies on the <strong>unit circle</strong>.</p>
@@ -3264,7 +3264,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 </div>
 <div class="box ex">
   <div class="head"><span class="kind">From the exercise sheet</span><span class="src sheet">Blatt 7 · Abgabeaufgabe 7.2</span></div>
-  <p>Compute with Chapter 5 methods only: \(\lim_{x\to\infty}\frac x{(3x+1)\ln x}\), \(\lim_{x\to0}\frac{\sin3x}x\), \(\lim_{x\to0}\frac{\tan2x}{\tan3x}\), \(\lim_{x\to1}\frac{\sin(x-1)}{x^2-1}\).</p>
+  <p>Compute with Chapter 5 methods only: \(\lim_{x\to\infty}\frac x{(3x+1)\ln x}\), \(\lim_{x\to0}\frac{\sin3x}x\), \(\lim_{x\to0}\frac{\tan2x}{\tan3x}\), \(\lim_{x\to1}\frac{\sin(x-1)}{x^2-1}\), \(\lim_{x\to\infty}x^\pi\), \(\lim_{x\to\infty}x^{-\sqrt3}\).</p>
   <details class="proof"><summary>Solutions (substitution + the key limits)</summary>
     <ul>
       <li>\(\frac x{(3x+1)\ln x}=\frac1{(3+\frac1x)\ln x}\to0\).</li>
@@ -3291,7 +3291,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <hr class="sec">
 <section id="c5-exam">
 <h2 data-toc="For the exam"><span class="num">!</span>What the exam asks from Chapter 5</h2>
-<p>Chapter 5 appears in seven of the nine exams, mostly as short answer-only items in Task 1:</p>
+<p>Chapter 5 appears in six of the nine exams (the five in the table, plus \(\frac{\sin x}x\to1\) in WiSe24 2a), mostly as short answer-only items in Task 1:</p>
 <div class="tbl"><table class="t">
   <thead><tr><th>Type</th><th>Exam tasks</th><th>What earns the points</th></tr></thead>
   <tbody>
@@ -3415,13 +3415,13 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
       <tr><td>\(e^x\)</td><td>−∞</td><td>\(e^x\)</td><td>\(1\)</td><td>\(e^x\to0\)</td></tr>
     </tbody>
   </table></div>
-  <p class="small"><strong>Lesson from (c):</strong> near a zero \(x_0\) of a polynomial, <em>factor out</em> \((x-x_0)\) as often as possible. The multiplicity of the zero gives the order.</p>
+  <p class="small"><strong>Lesson from (c), the third row:</strong> near a zero \(x_0\) of a polynomial, <em>factor out</em> \((x-x_0)\) as often as possible. The multiplicity of the zero gives the order.</p>
 </div>
 <div class="box ex">
   <div class="head"><span class="kind">From the exercise sheet</span><span class="src sheet">Blatt 8 · Tutoriumsaufgabe 8.1 · calculating with o and O</span></div>
   <ul>
     <li><strong>Products are fine:</strong> \(f_j=o(g_j)\Rightarrow f_1f_2=o(g_1g_2)\); \(f_j=O(g_j)\Rightarrow f_1f_2=O(g_1g_2)\) (multiply the limits / the constants).</li>
-    <li><strong>Sums need care:</strong> \(f_1+f_2=O(g_1+g_2)\) can fail because \(g_1+g_2\) may cancel: \(x^2-x=O(-x)\) and \(x^2+x=O(x)\), but the sum \(2x^2\neq O(0)\). What is true: \(f_1+f_2=O(|g_1|+|g_2|)\) and similarly for \(o\).</li>
+    <li><strong>Sums need care:</strong> \(f_1+f_2=O(g_1+g_2)\) can fail because \(g_1+g_2\) may cancel: for \(x\to0\), \(x^2-x=O(-x)\) and \(x^2+x=O(x)\), but the sum \(2x^2\neq O(0)\). What is true: \(f_1+f_2=O(|g_1|+|g_2|)\) and similarly for \(o\).</li>
   </ul>
 </div>
 <div class="widget" id="c6-landau">
@@ -3576,7 +3576,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <details class="proof"><summary>Proof idea</summary>
     <p>Where \(g(x)\neq g(x_0)\), expand the quotient:
     \[\frac{f(g(x))-f(g(x_0))}{x-x_0}=\underbrace{\frac{f(g(x))-f(g(x_0))}{g(x)-g(x_0)}}_{\to f'(g(x_0))}\cdot\underbrace{\frac{g(x)-g(x_0)}{x-x_0}}_{\to g'(x_0)}.\]
-    (The first factor converges because \(g(x)\to g(x_0)\), by continuity of \(g\).) Where \(g(x)=g(x_0)\), the quotient is 0 and so is the right-hand side. <span class="qed">∎</span></p>
+    (The first factor converges because \(g(x)\to g(x_0)\), by continuity of \(g\).) Where \(g(x)=g(x_0)\), the quotient is 0; if this happens for \(x\) arbitrarily close to \(x_0\), then \(g'(x_0)=0\), so the claimed value \(f'(g(x_0))\,g'(x_0)\) is 0 as well. <span class="qed">∎</span></p>
   </details>
 </div>
 <div class="box ex">
@@ -4165,9 +4165,10 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <div class="box exam">
   <div class="head"><span class="kind">Exam question</span><span class="src exam">Klausur WiSe20 · A2b</span></div>
   <p>\(f\) continuous on \([0,\infty)\), differentiable on \((0,\infty)\), \(f(0)=0\), \(f(x)&gt;0\) for \(x&gt;0\). Which hold? (i) \(\liminf_{x\downarrow0}\frac{f'(x)}{f(x)}=-\infty\), (ii) \(\lim_{x\downarrow0}\frac{f'(x)}{f(x)}=-\infty\), (iii) \(\liminf_{x\downarrow0}\frac{f'(x)}{f(x)}=\infty\).</p>
-  <details class="proof"><summary>Solution: only (iii)</summary>
+  <details class="proof"><summary>Solution: official answer (iii), but see the flag below</summary>
     <p><strong>(i), (ii) false:</strong> \(f(x)=\sqrt x\) gives \(\frac{f'}f=\frac1{2x}\to+\infty\).</p>
-    <p><strong>(iii) true.</strong> Put \(L(x)=\ln f(x)\) on \((0,\infty)\); then \(L'=\frac{f'}f\) (chain rule), and \(L(x)\to-\infty\) as \(x\downarrow0\) because \(f(x)\to f(0)=0\) (continuity). Suppose (iii) fails: then there are \(M\) and \(t&gt;0\) with \(L'(\xi)&lt;M\) for all \(\xi\in(0,t)\) (liminf \(=\) smallest accumulation value, Chapter 4). For \(0&lt;x&lt;t\), the MVT gives \(L(t)-L(x)=L'(\xi)(t-x)&lt;M(t-x)\le|M|t\), so \(L(x)&gt;L(t)-|M|t\) stays bounded below — contradicting \(L(x)\to-\infty\). (The official solution integrates \(L'\) instead of using the MVT; same idea.)</p>
+    <p><strong>What the argument proves.</strong> Put \(L(x)=\ln f(x)\) on \((0,\infty)\); then \(L'=\frac{f'}f\) (chain rule), and \(L(x)\to-\infty\) as \(x\downarrow0\) because \(f(x)\to f(0)=0\) (continuity). Suppose \(\limsup_{x\downarrow0}\frac{f'(x)}{f(x)}&lt;\infty\): then there are \(M\) and \(t&gt;0\) with \(L'(\xi)&lt;M\) for all \(\xi\in(0,t)\). For \(0&lt;x&lt;t\), the MVT gives \(L(t)-L(x)=L'(\xi)(t-x)&lt;M(t-x)\le|M|t\), so \(L(x)&gt;L(t)-|M|t\) stays bounded below — contradicting \(L(x)\to-\infty\). Hence \(\limsup_{x\downarrow0}\frac{f'(x)}{f(x)}=\infty\). (The official solution integrates \(L'\) instead of using the MVT; same idea.)</p>
+    <p><strong>Flag:</strong> the official solution uses exactly this argument for (iii), which is about the <em>liminf</em>. But "\(\liminf&lt;\infty\)" only gives points arbitrarily close to 0 with \(L'&lt;M\), not a whole interval \((0,t)\). Counterexample: \(f(x)=x\big(2+\sin\frac1x\big)\), \(f(0)=0\), satisfies all hypotheses, and \(\frac{f'(x)}{f(x)}=\frac1x-\frac{\cos(1/x)}{x^2(2+\sin(1/x))}\) equals \(2\pi n-2\pi^2n^2\to-\infty\) at \(x=\frac1{2\pi n}\). So for this \(f\) the liminf is \(-\infty\) and (iii) fails. As stated, none of (i)–(iii) holds for every such \(f\); what always holds is \(\limsup=\infty\). Worth asking your tutor.</p>
   </details>
 </div>
 <h3 id="c7-drill" data-toc="Drill: classify and compute">Drill: classify points and compute limits</h3>
@@ -4241,7 +4242,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p>A <strong>partition</strong> <span class="de-term">[Zerlegung]</span> \(Z\): \(a=x_0&lt;x_1&lt;\dots&lt;x_n=b\), with <strong>mesh</strong> <span class="de-term">[Feinheit]</span> \(|Z|=\max_j|x_j-x_{j-1}|\). Choose intermediate points \(\xi_j\in[x_{j-1},x_j]\). The <strong>Riemann sum</strong> is
   \[S_Z=\sum_{j=1}^nf(\xi_j)(x_j-x_{j-1}).\]
   \(f\) is <strong>(Riemann) integrable</strong> if for every sequence of partitions with \(|Z_n|\to0\) and every choice of intermediate points, the Riemann sums converge to the same limit \(I(f)=\int_a^bf(x)\,dx\).</p>
-  <p class="small"><strong>Why "every partition sequence and every choice of \(\xi_j\)":</strong> for a fixed partition, the Riemann sum depends on where in each strip you measure the height. Integrable means that this freedom stops mattering as the strips get thin: all choices lead to the same number. <span class="src extra">Extra</span> A function where it never stops mattering: \(f(x)=1\) for rational \(x\), \(0\) for irrational \(x\) on \([0,1]\). Every strip contains both kinds of points (Satz 1.10), so choosing rational \(\xi_j\) gives sums 1, irrational \(\xi_j\) gives sums 0 — not integrable.</p>
+  <p class="small"><strong>Why "every partition sequence and every choice of \(\xi_j\)":</strong> for a fixed partition, the Riemann sum depends on where in each strip you measure the height. Integrable means that this freedom stops mattering as the strips get thin: all choices lead to the same number. <span class="src extra">Extra</span> A function where it never stops mattering: \(f(x)=1\) for rational \(x\), \(0\) for irrational \(x\) on \([0,1]\). Every strip contains both kinds of points (rationals by Satz 1.10; irrationals too, e.g. \(r+\frac{\sqrt2}n\) for rational \(r\) and large \(n\)), so choosing rational \(\xi_j\) gives sums 1, irrational \(\xi_j\) gives sums 0 — not integrable.</p>
   <p class="small">Conventions: \(\int_a^af=0\), \(\int_b^af=-\int_a^bf\). The name of the variable does not matter: \(\int_a^bf(x)\,dx=\int_a^bf(t)\,dt\). Equidistant partition: \(x_j=a+j\frac{b-a}n\), mesh \(\frac{b-a}n\to0\).</p>
 </div>
 <div class="widget" id="c8-riem">
@@ -4370,7 +4371,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <details class="proof"><summary>SoSe19 A6: \(f\) continuous and \(&gt;0\) on \([a,b]\). Prove \(\int_a^bf&gt;0\) using the FTC.</summary>
     <p>\(F(x)=\int_a^xf\) is differentiable on \((a,b)\) with \(F'=f&gt;0\), so \(F\) is strictly increasing (monotonicity criterion; \(F\) is continuous on \([a,b]\)). Hence \(\int_a^bf=F(b)-F(a)&gt;0\).</p>
   </details>
-  <details class="proof"><summary>WiSe22 4b: where is \(f(x)=\int_1^x(t-1)^9e^{-t}\,dt\) increasing/decreasing?</summary>
+  <details class="proof"><summary>WiSe22 4b: where is \(f(x)=\int_0^x(t-1)^9e^{-t}\,dt\) (\(x&gt;0\)) increasing/decreasing?</summary>
     <p>FTC: \(f'(x)=(x-1)^9e^{-x}\). \(e^{-x}&gt;0\) and \((x-1)^9\) has the sign of \(x-1\). So \(f\) is strictly decreasing on \((0,1)\), strictly increasing on \((1,\infty)\). <strong>No need to compute the integral!</strong></p>
   </details>
   <p class="small">WiSe20 A4 (\(f(x)=10+\int_{-3}^x(3t^2-12)dt\)) is solved in Chapter 7.</p>
@@ -4630,7 +4631,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
     <li>the integrand blows up at a point of \([a,b]\) (a singularity), possibly <em>inside</em> the interval.</li>
   </ul>
   <p>\(\int_0^1\frac1x\,dx=\lim_{\varepsilon\downarrow0}[\ln x]_\varepsilon^1=\lim(-\ln\varepsilon)=\infty\). And \(\int_{-1}^1\frac1x\,dx\) is <strong>not defined</strong>: it splits into \(-\infty+\infty\). Writing \([\ln|x|]_{-1}^1=0\) is wrong because the FTC needs continuity on the whole interval.</p>
-  <p class="small">But (SoSe23-style, Skript 13.3): \(\int_0^{\pi/2}\frac{\sin2x}{\cos x+\cos^2x}\) only <em>looks</em> improper. After cancelling \(\cos x\), the integrand \(\frac{2\sin x}{1+\cos x}\) is continuous on the whole interval.</p>
+  <p class="small">But (Skript 13.3): \(\int_0^{\pi/2}\frac{\sin2x}{\cos x+\cos^2x}\) only <em>looks</em> improper. After cancelling \(\cos x\), the integrand \(\frac{2\sin x}{1+\cos x}\) is continuous on the whole interval.</p>
 </div>
 <div class="box thm">
   <div class="head"><span class="kind">Lemma · the benchmark integrals</span><span class="src">Skript 9.5, 9.6, 9.7</span></div>
@@ -4807,7 +4808,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <div class="box ex">
   <div class="head"><span class="kind">Examples</span><span class="src">Skript 9.16 – 9.19 · Blatt 12.1</span></div>
   <ul>
-    <li><strong>Power sums:</strong> \(\frac{n^{\alpha+1}}{\alpha+1}\le\sum_{k=1}^nk^\alpha\le\frac{(n+1)^{\alpha+1}-1}{\alpha+1}\), hence \(\sum_{k=1}^nk^\alpha\simeq\frac{n^{\alpha+1}}{\alpha+1}\) (e.g. \(\sum k\simeq\frac{n^2}2\)).</li>
+    <li><strong>Power sums</strong> (\(\alpha&gt;0\), \(f=x^\alpha\) increasing): \(\frac{n^{\alpha+1}}{\alpha+1}\le\sum_{k=1}^nk^\alpha\le\frac{(n+1)^{\alpha+1}-1}{\alpha+1}\), hence \(\sum_{k=1}^nk^\alpha\simeq\frac{n^{\alpha+1}}{\alpha+1}\) (e.g. \(\sum k\simeq\frac{n^2}2\)).</li>
     <li><strong>Harmonic numbers</strong> (Blatt 12.1): with \(f=\frac1x\) decreasing: \(\ln(n+1)\le H_n\le1+\ln n\). Divide by \(\ln n\) and squeeze: \(H_n\simeq\ln n\). So Quicksort's \(C_n=2(n+1)H_n-2n\simeq2n\ln n\).</li>
     <li><strong>Sorting lower bound</strong> <span class="src">Skript 9.17</span>: comparison sorting needs up to \(\log_2(n!)\) comparisons, \(\log_2(n!)=\ln(n!)\log_2e\). With \(f=\ln x\) increasing:
     \[n\ln n-n+1\le\ln(n!)\le(n+1)\ln(n+1)-n.\]
@@ -4890,14 +4891,14 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <hr class="sec">
 <section id="c9-exam">
 <h2 data-toc="For the exam"><span class="num">!</span>What the exam asks from Chapter 9</h2>
-<p>Chapter 9 appears in five of the nine exams, most heavily in WiSe24 (four subtasks):</p>
+<p>Chapter 9 appears in six of the nine exams, most heavily in WiSe24 (four subtasks):</p>
 <div class="tbl"><table class="t">
   <thead><tr><th>Type</th><th>Exam tasks</th><th>What earns the points</th></tr></thead>
   <tbody>
     <tr><td><strong>Compute an improper integral</strong></td><td>WiSe19 4b, WiSe22 2b, Skript 13.6</td><td>write the limit explicitly; substitution; evaluate the limit</td></tr>
     <tr><td><strong>For which parameter?</strong></td><td>WiSe20 5b</td><td>reduce to the benchmark \(\int y^{-a}\)</td></tr>
     <tr><td><strong>Does it exist? (trap)</strong></td><td>WiSe24 6c</td><td>find every point where the integrand can blow up</td></tr>
-    <tr><td><strong>Integral test</strong></td><td>WiSe24 6d, SoSe23 A4e</td><td>check positive + decreasing; substitute \(y=\ln x\) or \(\ln\ln x\)</td></tr>
+    <tr><td><strong>Integral test</strong></td><td>WiSe24 6d (SoSe23 A4e: same series, done with the MVT)</td><td>check positive + decreasing; substitute \(y=\ln x\) or \(\ln\ln x\)</td></tr>
     <tr><td><strong>Limits and integrals / uniform convergence</strong></td><td>WiSe24 6b, WiSe24 2b, SoSe19 A3</td><td>pointwise limit first; then test \(\sup_x\) or the integral with a moving point \(x_n\)</td></tr>
   </tbody>
 </table></div>
@@ -5147,7 +5148,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <hr class="sec">
 <section id="c10-exam">
 <h2 data-toc="For the exam"><span class="num">!</span>What the exam asks from Chapter 10</h2>
-<p>Chapter 10 appears in six of the nine exams, almost always as short answer-only items:</p>
+<p>Chapter 10 appears in five of the nine exams, almost always as short answer-only items:</p>
 <div class="tbl"><table class="t">
   <thead><tr><th>Type</th><th>Exam tasks</th><th>What earns the points</th></tr></thead>
   <tbody>
@@ -5203,7 +5204,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <header class="top">
   <div class="eyebrow">Analysis für Informatik · MA0902 · Chapter 11</div>
   <h1>Several Variables<span class="de">Differentialrechnung mehrerer Veränderlicher</span></h1>
-  <p class="lede">Functions of several inputs, like \(f(x,y)\). Differentiate in one variable at a time (<strong>partial derivatives</strong>), collect them in the <strong>gradient</strong>, the second derivatives in the <strong>Hessian matrix</strong>, and use both to find and classify <strong>extrema</strong>. This extrema task appears in every recent exam.</p>
+  <p class="lede">Functions of several inputs, like \(f(x,y)\). Differentiate in one variable at a time (<strong>partial derivatives</strong>), collect them in the <strong>gradient</strong>, the second derivatives in the <strong>Hessian matrix</strong>, and use both to find and classify <strong>extrema</strong>. This extrema task appears in most recent exams.</p>
   <p class="legend">Source labels: <span class="src">Skript 11.6</span> = stated in your lecture script · <span class="src sheet">Blatt 14 · 14.3</span> = exercise sheet · <span class="src exam">Klausur SoSe23</span> = old exam · <span class="src extra">Extra</span> = my own addition (intuition, a proof the script leaves out, or an extra example). A <b>§</b> marks a whole <em>section</em> of the script (§11.3 = Section 11.3) rather than a numbered result (11.3 = Definition 11.3).</p>
 </header>
 
@@ -5257,7 +5258,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
     <li><strong>positive definite</strong> if \(x^tAx&gt;0\) for every \(x\neq0\) (a bowl opening upwards) ⇔ all eigenvalues \(&gt;0\);</li>
     <li><strong>negative definite</strong> if \(x^tAx&lt;0\) for every \(x\neq0\) ⇔ all eigenvalues \(&lt;0\);</li>
     <li><strong>indefinite</strong> if \(x^tAx\) takes both signs ⇔ eigenvalues of both signs (a saddle);</li>
-    <li><strong>semidefinite</strong> if \(\ge0\) (resp. \(\le0\)) everywhere, with 0 occurring ⇔ some eigenvalue is 0.</li>
+    <li><strong>semidefinite</strong> if \(\ge0\) (resp. \(\le0\)) everywhere, with 0 occurring ⇔ all eigenvalues \(\ge0\) (resp. \(\le0\)) and some eigenvalue is 0.</li>
   </ul>
   <p><strong>Why the eigenvalues decide:</strong> write \(x\) in a perpendicular eigenvector basis, \(x=t_1v_1+t_2v_2\) with \(\|v_i\|=1\). Then \(Ax=\lambda_1t_1v_1+\lambda_2t_2v_2\) and
   \[x^tAx=\lambda_1t_1^2+\lambda_2t_2^2.\]
@@ -5493,7 +5494,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p>\(f:U\subseteq\mathbb R^n\to\mathbb R^m\) is (totally) differentiable at \(x\) if \(f(x+h)=f(x)+Ah+o(\|h\|)\) for a linear map / \(m\times n\) matrix \(A\). Then \(a_{ij}=\frac{\partial f_i}{\partial x_j}(x)\): row \(i\) is the gradient (as a row) of component \(f_i\). \(A=Df(x)=J_f(x)\) is the <strong>Jacobian matrix</strong> <span class="de-term">[Jacobi-Matrix]</span>. \(f\) is differentiable iff all components are.</p>
   <p class="small">Example: \(f(x,y)=(x^2y,\ \sin x+y)\): \(J_f=\begin{pmatrix}2xy&amp;x^2\\\cos x&amp;1\end{pmatrix}\).</p>
   <p class="small">Special cases you already know: for \(m=1\) the Jacobian is the row \(Df=\nabla f^t\); for \(n=1\) (a curve) it is the column \(\gamma'(t)\); and the Hessian of \(f\) is the Jacobian of \(\nabla f\).</p>
-  <details class="proof"><summary>Why \(a_{ij}=\partial f_i/\partial x_j\) (Lemma 11.19; the script gives no proof) <span class="src extra">Extra</span></summary>
+  <details class="proof"><summary>Why \(a_{ij}=\partial f_i/\partial x_j\) (Lemma 11.19, the script's proof spelled out) <span class="src">Skript 11.19</span></summary>
   <p>Put \(h=te_j\) (move only in coordinate \(j\), by \(t\)). Then \(Ah=t\cdot(\text{column }j\text{ of }A)\), and \(\|h\|=|t|\). Row \(i\) of \(f(x+h)=f(x)+Ah+o(\|h\|)\) reads
   \[f_i(x+te_j)=f_i(x)+t\,a_{ij}+o(|t|).\]
   Divide by \(t\) and let \(t\to0\): \(\frac{f_i(x+te_j)-f_i(x)}t\to a_{ij}\). The left side is by definition \(\partial_jf_i(x)\). So the matrix \(A\) is forced: if a linear approximation exists at all, it must be the matrix of partial derivatives. The same argument, read row by row, shows that \(f\) is differentiable iff each component \(f_i\) is.</p>
@@ -5505,7 +5506,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <hr class="sec">
 <section id="c11-exam">
 <h2 data-toc="For the exam"><span class="num">!</span>What the exam asks from Chapter 11</h2>
-<p>Chapter 11 appears in every exam since WiSe19 (five of the nine exams provided; the older ones end before this chapter), usually as a full task of 4–11 points:</p>
+<p>Chapter 11 appears in five of the nine exams provided (WiSe19, WiSe22, SoSe23, WiSe23, WiSe24; the others end before this chapter), usually as a full task of 4–11 points:</p>
 <div class="tbl"><table class="t">
   <thead><tr><th>Type</th><th>Exam tasks</th><th>What earns the points</th></tr></thead>
   <tbody>
@@ -5529,7 +5530,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <ul>
     <li><strong>For the exam:</strong> the seven task types above; the procedure of §11.3 written out with every step justified; the \(2\times2\) determinant test and the eigenvalue criterion; the statement of Schwarz with its hypothesis.</li>
     <li><strong>Common point losses:</strong> forgetting critical points (solve the system fully, e.g. both \(x=2\) and \(x=-2\)); calling a point with a zero eigenvalue a minimum; claiming a global extremum without checking behaviour at infinity.</li>
-    <li><strong>For Chapter 12:</strong> partial derivatives and \(e^{\lambda x}\) are the tools for differential equations; a curve \(\gamma(t)\) with \(\gamma'(t)=F(\gamma(t))\) is exactly what a system of ODEs describes.</li>
+    <li><strong>For Chapter 12:</strong> the condition "\(\partial f/\partial y\) continuous" in Picard–Lindelöf is a partial derivative, and a curve \(\gamma(t)\) with \(\gamma'(t)=F(\gamma(t))\) is exactly what a system of ODEs describes.</li>
   </ul>
 </div>
 </section>
@@ -5595,7 +5596,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <div class="box def">
   <div class="head"><span class="kind">Definition</span><span class="src">Skript 12.1</span></div>
   <p>An equation \(y'(x)=f(x,y(x))\) for an unknown function \(y\) of one real variable \(x\) is an <strong>ordinary differential equation</strong> <span class="de-term">[gewöhnliche Differentialgleichung]</span> of <strong>1st order</strong> <span class="de-term">[1. Ordnung]</span> (only \(y'\) occurs). "Ordinary" means there is only one variable \(x\), so there are no partial derivatives. The <strong>order</strong> is the highest derivative that occurs.</p>
-  <p>An <strong>initial value problem (IVP)</strong> additionally prescribes \(y(x_0)=y_0\): find \(y:I\to\Omega_0\) with
+  <p>An <strong>initial value problem (IVP)</strong> additionally prescribes \(y(x_0)=y_0\): for an interval \(I\ni x_0\) and a set \(\Omega_0\ni y_0\) of allowed values, find \(y:I\to\Omega_0\) with
   \[y'(x)=f(x,y(x))\ \ \forall x\in I,\qquad y(x_0)=y_0.\]</p>
   <p class="small">Why "initial value"? Think of \(x\) as time: the equation says how the state changes, the initial value says where you start. Without it you get a whole family of solutions, and with it (usually) exactly one.</p>
 </div>
@@ -5632,7 +5633,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <h2 data-toc="12.2 Separation of variables"><span class="num">12.2</span>Separation of variables <span class="de-term">[Trennung der Variablen]</span></h2>
 <p>The right-hand side splits into a factor depending only on \(x\) times a factor depending only on \(y\). Then you can put all \(y\)-terms on one side and all \(x\)-terms on the other, and integrate each side.</p>
 <div class="box thm">
-  <div class="head"><span class="kind">Derivation</span><span class="src">Skript 12.2, (12.1)</span></div>
+  <div class="head"><span class="kind">Derivation</span><span class="src">Skript §12.2, (12.1)</span></div>
   <p>IVP: \(y'(x)=f(x)\,g(y(x))\), \(y(x_0)=y_0\), with \(f,g\) continuous and \(g(y_0)\neq0\).</p>
   <ol class="steps">
     <li>\(g\) and \(y\) are continuous and \(g(y_0)\ne0\), so \(g(y(x))\neq0\) for \(x\) near \(x_0\). Only there may we divide: \(\frac{y'(x)}{g(y(x))}=f(x)\).</li>
@@ -5642,7 +5643,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   </ol>
 </div>
 <div class="box method">
-  <div class="head"><span class="kind">Method · the short form used in solutions</span><span class="src">Skript 12.2</span></div>
+  <div class="head"><span class="kind">Method · the short form used in solutions</span><span class="src">Skript §12.2</span></div>
   <p>Write \(y'=\frac{dy}{dx}\) and "multiply" by \(dx\) (a shorthand for steps 1–3):
   \[\frac{dy}{dx}=f(x)g(y)\ \Longrightarrow\ \frac{dy}{g(y)}=f(x)\,dx\ \Longrightarrow\ \int\frac{dy}{g(y)}=\int f(x)\,dx+c.\]
   Then: <strong>(1)</strong> solve for \(y\); <strong>(2)</strong> determine \(c\) from \(y(x_0)=y_0\); <strong>(3)</strong> state where the solution is defined (the exams often ask for the <strong>maximal domain</strong> <span class="de-term">[maximaler Definitionsbereich]</span>); <strong>(4)</strong> check.</p>
@@ -5759,7 +5760,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
   <p>(a) Linearly dependent ⇒ \(W\equiv0\). (b) For two <em>solutions</em> of the homogeneous equation: independent ⇔ \(W(x)\ne0\) for some \(x\).</p>
   <p>All solutions of the homogeneous equation are \(y=c_1y_1+c_2y_2\) with two linearly independent solutions \(y_1,y_2\), called <strong>fundamental solutions</strong> <span class="de-term">[Fundamentallösungen / Fundamentalsystem]</span>. The solution space is 2-dimensional: one free constant per order.</p>
   <p class="small">Example: \(e^{2x}\) and \(e^{3x}\) give \(W=\det\begin{pmatrix}e^{2x}&amp;e^{3x}\\2e^{2x}&amp;3e^{3x}\end{pmatrix}=e^{5x}\neq0\), so they are independent.</p>
-  <details class="proof"><summary>Proof of Satz 12.14</summary>
+  <details class="proof"><summary>Proof of Satz 12.14 (the script's short argument, with the missing step for (b) "⇒" filled in) <span class="src extra">Extra</span></summary>
   <p>Recall from linear algebra that the \(2\times2\) system \(M\alpha=0\) has only the solution \(\alpha=0\) exactly when \(\det M\neq0\). Apply this to \(M=\begin{pmatrix}y_1(x)&amp;y_2(x)\\y_1'(x)&amp;y_2'(x)\end{pmatrix}\), whose determinant is \(W(x)\).</p>
   <p><strong>(a)</strong> If \(y_1,y_2\) are linearly dependent, there is \((\alpha_1,\alpha_2)\neq(0,0)\) with \(\alpha_1y_1+\alpha_2y_2\equiv0\); differentiating, \(\alpha_1y_1'+\alpha_2y_2'\equiv0\). So for every \(x\) the system \(M\alpha=0\) has a non-zero solution, which forces \(W(x)=0\) for all \(x\).</p>
   <p><strong>(b) "⇐"</strong> If \(W(x_1)\ne0\) at some \(x_1\), then \(M(x_1)\alpha=0\) forces \(\alpha=0\). So any relation \(\alpha_1y_1+\alpha_2y_2\equiv0\) has \(\alpha_1=\alpha_2=0\): independent. (This direction works for any differentiable functions.)</p>
@@ -5770,7 +5771,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 </div>
 <h3 id="c12-char" data-toc="Characteristic polynomial">Homogeneous case: the characteristic polynomial</h3>
 <div class="box method">
-  <div class="head"><span class="kind">Method · \(y''+ay'+by=0\)</span><span class="src">Skript 12.4</span></div>
+  <div class="head"><span class="kind">Method · \(y''+ay'+by=0\)</span><span class="src">Skript §12.4, 12.15</span></div>
   <p><strong>Idea:</strong> \(y\), \(y'\), \(y''\) must cancel, so they should be "the same kind of function" up to constant factors. Exponentials have this property. <strong>Ansatz \(y=e^{\lambda x}\)</strong> gives \(e^{\lambda x}(\lambda^2+a\lambda+b)=0\), and since \(e^{\lambda x}\ne0\):
   \[\lambda^2+a\lambda+b=0,\qquad \lambda_{1,2}=-\frac a2\pm\sqrt D,\quad D=\frac{a^2}4-b.\]</p>
   <div class="tbl"><table class="t">
@@ -5811,7 +5812,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 </div>
 <h3 id="c12-inh" data-toc="Particular solutions">Inhomogeneous case: guess a particular solution</h3>
 <div class="box method">
-  <div class="head"><span class="kind">Method 1 · ansatz of the same type as \(f\)</span><span class="src">Skript 12.4, 12.16</span></div>
+  <div class="head"><span class="kind">Method 1 · ansatz of the same type as \(f\)</span><span class="src">Skript §12.4, 12.16</span></div>
   <div class="tbl"><table class="t">
     <thead><tr><th>right-hand side \(f(x)\)</th><th>ansatz \(y_i(x)\)</th></tr></thead>
     <tbody>
@@ -5910,7 +5911,7 @@ so that <em>every</em> element of the set turns up somewhere in the list — may
 <hr class="sec">
 <section id="c12-exam">
 <h2 data-toc="For the exam"><span class="num">!</span>What the exam asks from Chapter 12</h2>
-<p>Differential equations appear in four of the nine exams (WiSe19, WiSe22, SoSe23, WiSe24), always as a computation of 3–8 points; the \(f'=cf\) uniqueness argument appears once more as SoSe19 A4. Nothing from §12.5 (Picard–Lindelöf, blow-up) has been asked so far — but it is on the "minimal contents" list only in the form "know the statement and examples".</p>
+<p>Differential equations appear in four of the nine exams (WiSe19, WiSe22, SoSe23, WiSe24), always as a computation of 3–8 points; the \(f'=cf\) uniqueness argument appears once more as SoSe19 A4. Nothing from §12.5 (Picard–Lindelöf, blow-up) has been asked so far, and the script gives no "minimal contents" for it; knowing the statement and the examples is enough.</p>
 <div class="tbl"><table class="t">
   <thead><tr><th>Type</th><th>Exam tasks</th><th>What earns the points</th></tr></thead>
   <tbody>
@@ -5991,10 +5992,10 @@ window.GUIDE_CHAPTERS = [
     sheets:'Blatt 13, 14', exams:'Taylor polynomials, radius' },
   { id:'ch11', n:11, title:'Several Variables', de:'Differentialrechnung mehrerer Veränderlicher', part:'Several variables & ODEs',
     subs:['11.1 Curves','11.2 Partial derivatives','11.3 Higher derivatives, extrema'],
-    sheets:'Blatt 14', exams:'gradient, Hessian, extrema (every exam)' },
+    sheets:'Blatt 14', exams:'gradient, Hessian, extrema (5 of 9 exams)' },
   { id:'ch12', n:12, title:'Differential Equations', de:'Differentialgleichungen', part:'Several variables & ODEs',
     subs:['12.1 Initial value problems','12.2 Separation of variables','12.3 Linear 1st order','12.4 Linear 2nd order','12.5 General theory'],
-    sheets:'Blatt 10, 14', exams:'ODE solving (almost every exam)' }
+    sheets:'Blatt 10, 14', exams:'ODE solving (4 of 9 exams)' }
 ];
 
 /* ===== Guide core: router, sidebar, pager, helpers ===== */
@@ -6705,7 +6706,7 @@ G.inits.ch01 = function(sec){
            'Not bounded above ⇒ sup = ∞, no maximum.'] },
     { name:'{ e^(1/n) + e^(−1/n) : n ∈ ℕ }  · Klausur SoSe23', src:'Klausur SoSe23 1d', lo:1.8, hi:3.3, ivs:[], pts:(function(){var a=[];for(var n=1;n<=80;n++)a.push(Math.exp(1/n)+Math.exp(-1/n));return a;})(),
       sup:'e + 1/e ≈ 3.086', supV:Math.E+1/Math.E, inf:'2', max:'e + 1/e', min:'does not exist',
-      why:['t ↦ e^t + e^(−t) increases for t > 0, and t = 1/n shrinks as n grows ⇒ the terms decrease: 3.086, 2.255, 2.023, …',
+      why:['t ↦ e^t + e^(−t) increases for t > 0, and t = 1/n shrinks as n grows ⇒ the terms decrease: 3.086, 2.255, 2.112, …',
            'Decreasing ⇒ the first term a₁ = e + 1/e is the maximum (and the supremum).',
            'Every term is > 2 (since (u + v)/2 ≥ √(uv) = 1 with u = e^(1/n), v = e^(−1/n), equality only if u = v), and the terms approach 2 ⇒ inf = 2, never attained ⇒ no minimum.'] },
     { name:'ℕ = {1, 2, 3, …}', src:'Skript 1.9', lo:-0.5, hi:8.5, ivs:[], pts:[1,2,3,4,5,6,7,8], arrowRight:true,
@@ -6851,7 +6852,7 @@ G.inits.ch01 = function(sec){
     { q:'M = (0, 1]. Which statement is true?', o:['max M = 1, min M = 0','max M = 1, inf M = 0, no minimum','sup M = 1, no maximum','no sup, since M is infinite'], a:1,
       e:'1 ∈ M, so sup = max = 1. inf M = 0, but 0 ∉ M (round bracket), so no minimum.' },
     { q:'Which of these sets is countable?', o:['ℝ','[0, 1]','ℚ','the irrational numbers'], a:2,
-      e:'ℚ can be listed along anti-diagonals (Lemma 1.3). ℝ and [0,1] are uncountable (Cantor). The irrationals are uncountable too: otherwise ℝ = ℚ ∪ irrationals would be countable.' },
+      e:'ℚ can be listed along the diagonals of the p/q grid (Lemma 1.3). ℝ and [0,1] are uncountable (Cantor). The irrationals are uncountable too: otherwise ℝ = ℚ ∪ irrationals would be countable.' },
     { q:'Negate: "∀ε > 0 ∃n₀ ∈ ℕ ∀n ≥ n₀: |aₙ − a| < ε".', o:['∀ε > 0 ∃n₀ ∀n ≥ n₀: |aₙ − a| ≥ ε','∃ε > 0 ∀n₀ ∃n ≥ n₀: |aₙ − a| ≥ ε','∃ε > 0 ∃n₀ ∀n ≥ n₀: |aₙ − a| > ε','∀ε > 0 ∀n₀ ∃n ≥ n₀: |aₙ − a| ≥ ε'], a:1,
       e:'Flip every quantifier (∀ ↔ ∃) and negate the end: < becomes ≥. This is exactly the divergence condition (2.1) in Skript Beispiel 2.5.' },
     { q:'When does |x + y| = |x| + |y| hold?', o:['always','exactly when xy ≥ 0','exactly when xy ≤ 0','only when x = y'], a:1,
@@ -6934,8 +6935,8 @@ G.inits.ch02 = function(sec){
     }
     var out=document.getElementById('c2-epsOut');
     if (s.conv){ out.className='verdict ok'; out.textContent='For ε = '+(e<0.01?e.toExponential(1):e.toFixed(3))+': every term from n₀ = '+n0+' on lies in the band (checked up to n = 200 000). Red dots are terms outside the band: only finitely many. '+s.note; }
-    else { out.className = e>1 ? 'verdict ok' : 'verdict no';
-      out.textContent = e>1 ? 'ε > 1: the band around 1 is wide enough to contain −1 as well, so this ε is "beaten". But convergence needs every ε.' : 'ε ≤ 1: the terms −1 keep leaving the band forever, so no n₀ exists. And the same happens for any other candidate a (Skript 2.5): the sequence diverges.'; }
+    else { out.className = e>2 ? 'verdict ok' : 'verdict no';
+      out.textContent = e>2 ? 'ε > 2: the band around 1 is wide enough to contain −1 as well, so this ε is "beaten". But convergence needs every ε.' : 'ε ≤ 2: the terms −1 keep leaving the band forever, so no n₀ exists. And the same happens for any other candidate a (Skript 2.5): the sequence diverges.'; }
   }
   sel.addEventListener('change', draw); R.addEventListener('input', draw);
 
@@ -7085,11 +7086,11 @@ G.inits.ch02 = function(sec){
     { q:'aₙ > 0 for all n and aₙ → a. What follows?', o:['a > 0','a ≥ 0','a < 0','nothing'], a:1, e:'Satz 2.13 keeps ≤ / ≥, but not strict inequalities: 1/n > 0 and the limit is 0.' },
     { q:'Heron: aₙ = ½(aₙ₋₁ + 2/aₙ₋₁). Why may we pass to the limit in the recursion?', o:['always allowed','because we first showed the limit exists and is ≠ 0','because a₀ = 1','because the terms are rational'], a:1,
       e:'Passing to the limit needs the existence of the limit (monotone + bounded) and a ≠ 0 for the quotient rule. Otherwise aₙ₊₁ = 2aₙ would "give" a = 0.' },
-    { q:'To prove n³ → ∞ from the definition, given K > 0, which n₀ works?', o:['n₀ = K','any n₀ > ∛K','n₀ = 1','n₀ = K³'], a:1,
-      e:'For n ≥ n₀ > ∛K: n³ ≥ n₀³ > K. n₀ = K fails e.g. for K = 1 (n = 1 gives n³ = 1, not > 1); n₀ = 1 and K³ fail for large or small K.' },
+    { q:'To prove n³ → ∞ from the definition, given K > 0, which n₀ works?', o:['n₀ = 1','any natural n₀ ≥ ∛K','n₀ = 2','any natural n₀ ≥ ∛K − 1'], a:1,
+      e:'For n ≥ n₀ ≥ ∛K: n³ ≥ n₀³ ≥ K (WiSe22 A3 takes n₀ = ⌈∛K⌉). A fixed n₀ fails for large K (K = 9: 2³ = 8 < 9), and n₀ = 1 ≥ ∛8 − 1 fails for K = 8.' },
     { q:'Does (iⁿ) converge in ℂ?', o:['yes, to 0','yes, to 1','no: it cycles i, −1, −i, 1','only its absolute value converges, so yes'], a:2,
       e:'WiSe22 1e. The real parts 0, −1, 0, 1, … diverge, and a complex sequence converges iff real and imaginary parts converge. |iⁿ| = 1 converging says nothing.' },
-    { q:'lim √(n+1) − √n = ?', o:['∞','1','0','does not exist'], a:2,
+    { q:'lim (√(n+1) − √n) = ?', o:['∞','1','0','does not exist'], a:2,
       e:'"∞ − ∞" is undetermined; conjugate trick: = 1/(√(n+1) + √n) ≤ 1/(2√n) → 0.' },
     { q:'−1/n ≤ aₙ ≤ 1/n for all n. Then …', o:['aₙ → 0 by the squeeze theorem','aₙ may diverge','aₙ → 1','we need aₙ monotone first'], a:0,
       e:'Satz 2.14: both bounds → 0, so the sequence between them → 0. No monotonicity needed.' },
@@ -7103,7 +7104,7 @@ G.inits.ch02 = function(sec){
       e:'Geometric sum (Skript 2.20): multiply by (1 − q) and everything telescopes except 1 − qⁿ⁺¹. Chapter 3 lets n → ∞ and uses qⁿ⁺¹ → 0 for |q| < 1.' },
     { q:'Why does Chapter 3 need "every convergent sequence is bounded" and Satz 2.17?', o:['it doesn\'t','a series is the sequence of its partial sums, so series convergence IS sequence convergence','because series are always bounded','only for complex series'], a:1,
       e:'Σaₖ converges means sₙ = a₀ + … + aₙ converges. For aₖ ≥ 0 the sₙ increase, so bounded partial sums ⇒ convergence (Satz 2.17) — the basis of the comparison test.' },
-    { q:'2 < e < 3 follows from …', o:['a calculator','(1 + 1/n)ⁿ is increasing (≥ 2 at n = 1) and bounded by 3','e = 2.718…, so obviously','the geometric series alone'], a:1,
+    { q:'2 ≤ e ≤ 3 follows from …', o:['a calculator','(1 + 1/n)ⁿ is increasing (≥ 2 at n = 1) and bounded by 3','e = 2.718…, so obviously','the geometric series alone'], a:1,
       e:'Skript 2.21: the sequence is increasing, starts at 2, and is bounded above via the binomial theorem and a geometric sum.' }
   ]);
 
@@ -7289,7 +7290,7 @@ G.inits.ch03 = function(sec){
       { name:'Σ k²/2ᵏ  (Blatt 4.2d)', r:function(k){ var u=(k+1)/k; return u*u/2; }, q:0.5, v:'q = ½ < 1 ⇒ convergent.' },
       { name:'Σ k!/kᵏ  (Blatt 4.2h)', r:function(k){ return Math.pow(k/(k+1),k); }, q:1/Math.E, v:'q = 1/e ≈ 0.37 < 1 ⇒ convergent. The ratios decrease towards 1/e.' },
       { name:'Σ 3ⁿ(n!)²/(2n)!  (WiSe23 1b)', r:function(n){ return 3*(n+1)*(n+1)/((2*n+2)*(2*n+1)); }, q:0.75, v:'q = ¾ < 1 ⇒ convergent (absolutely).' },
-      { name:'Σ 5ᵏ/k!  (exponential series, x = 5)', r:function(k){ return 5/(k+1); }, q:0, v:'The first ratios are > 1 (the terms grow until k = 5), but that does not matter: q = 0 < 1 ⇒ convergent. Only the limit counts.' },
+      { name:'Σ 5ᵏ/k!  (exponential series, x = 5)', r:function(k){ return 5/(k+1); }, q:0, v:'The first ratios are > 1 (the terms grow up to k = 4, a₄ = a₅, and only then decrease), but that does not matter: q = 0 < 1 ⇒ convergent. Only the limit counts.' },
       { name:'Σ (−1)ⁿnⁿ/n!  (WiSe20 1a(i))', r:function(n){ return Math.pow((n+1)/n,n); }, q:Math.E, v:'|ratio| = (1 + 1/n)ⁿ → e > 1 ⇒ divergent. (The exam solution uses the necessary condition instead: |aₙ| ≥ 1.)' },
       { name:'Σ 2ᵏ/k³', r:function(k){ var u=k/(k+1); return 2*u*u*u; }, q:2, v:'q = 2 > 1 ⇒ divergent: the terms eventually grow.' },
       { name:'Σ 1/k  (harmonic)', r:function(k){ return k/(k+1); }, q:1, v:'q = 1: no information. This series diverges — although every ratio is < 1!' },
@@ -7597,7 +7598,7 @@ G.inits.ch04 = function(sec){
       el('circle',{cx:X(x0),cy:Y(y0),r:5,fill:amber},svg);
       el('text',{x:R-4,y:Y(y0+eps)-4,'text-anchor':'end','font-size':11,fill:green},svg,'f(x₀) ± ε');
       var out=document.getElementById('c4-edOut');
-      if (none){ out.className='verdict no'; out.textContent='No δ works: arbitrarily close to x₀ = '+G.fmt(x0,3)+' there are points whose value is 1 away from f(x₀), more than ε = '+G.fmt(eps,2)+'. Since this happens for ε < 1, f is not continuous at 0. (Try ε > 1, or move x₀ away from 0.)'; }
+      if (none){ out.className='verdict no'; out.textContent='No δ works: arbitrarily close to x₀ = '+G.fmt(x0,3)+' there are points whose value is 1 away from f(x₀), at least ε = '+G.fmt(eps,2)+'. Since this happens for every ε ≤ 1, f is not continuous at 0. (Try ε > 1, or move x₀ away from 0.)'; }
       else { out.className='verdict ok'; out.textContent='Largest δ ≈ '+G.fmt(dstar,4)+': every x with |x − x₀| < δ has |f(x) − f(x₀)| < ε (the graph over the blue band stays in the green band). '+(e.jump?'Away from 0 the jump function is constant, so any δ that avoids 0 works.':e.note); }
     }
     sel.addEventListener('change',draw); XR.addEventListener('input',draw); ER.addEventListener('input',draw); G.edRedraw=draw;
@@ -8486,7 +8487,7 @@ G.inits.ch08 = function(sec){
     { q:'∫ x² ln x dx', o:['by parts with f = ln x, g′ = x² → (x³/3) ln x − x³/9 + C','by parts with f = x², g′ = ln x','substitution u = ln x only','no elementary antiderivative'], a:0, e:'ln x gets simpler (→ 1/x); x² is easy to integrate. Then ∫ (x³/3)(1/x) dx = x³/9.' },
     { q:'∫ 1/(x² − 1) dx', o:['arctan x','partial fractions → ½ ln|(x − 1)/(x + 1)| + C','ln(x² − 1)','by parts'], a:1, e:'1/(x² − 1) = ½(1/(x − 1) − 1/(x + 1)).' },
     { q:'∫ e^(2x) cos x dx', o:['substitution','by parts twice, then solve for the integral','partial fractions','it is 0'], a:1, e:'The e^x·sin/cos type: the integral reappears. Result e^(2x)(2cos x + sin x)/5 + C.' },
-    { q:'∫ cos x/(1 + sin x) dx', o:['by parts','g′/g with g = 1 + sin x → ln(1 + sin x) + C','arctan(sin x)','partial fractions'], a:1, e:'Log-derivative rule (Skript 8.23): numerator is the derivative of the denominator; 1 + sin x ≥ 0.' },
+    { q:'∫ cos x/(1 + sin x) dx', o:['by parts','g′/g with g = 1 + sin x → ln(1 + sin x) + C','arctan(sin x)','partial fractions'], a:1, e:'Log-derivative rule (Skript 8.23): numerator is the derivative of the denominator; 1 + sin x > 0 wherever the integrand is defined.' },
     { q:'∫₋₁¹ x⁵ e^(x²) dx', o:['by parts five times','0 by symmetry','2∫₀¹ x⁵ e^(x²) dx','e − 1'], a:1, e:'x⁵ is odd, e^(x²) even, so the product is odd on a symmetric interval.' },
     { q:'d/dx ∫₀^(x²) e^(−t²) dt', o:['e^(−x⁴)','2x e^(−x⁴)','e^(−x²)','cannot be computed'], a:1, e:'F(u) = ∫₀ᵘ e^(−t²) dt has F′(u) = e^(−u²) (FTC); chain rule with u = x² gives 2x e^(−x⁴).' },
     { q:'∫ (x³ + 1)/x dx', o:['by parts','divide first: x³/3 + ln|x| + C','substitution u = x³ + 1','partial fractions with an ansatz'], a:1, e:'(x³ + 1)/x = x² + 1/x. Always simplify before choosing a technique.' }
@@ -8828,7 +8829,7 @@ G.inits.ch11 = function(sec){
     { n:'x³ + y⁴ − 12x + 4y  (Klausur SoSe23 A3)', f:function(x,y){ return x*x*x+y*y*y*y-12*x+4*y; }, g:function(x,y){ return [3*x*x-12,4*y*y*y+4]; }, h:function(x,y){ return [[6*x,0],[0,12*y*y]]; }, box:[-3.5,3.5,-2.5,1.5], crit:[[2,-1],[-2,-1]] },
     { n:'x² + x + y + e^(−x−y)  (Klausur WiSe24 5b)', f:function(x,y){ return x*x+x+y+E(-x-y); }, g:function(x,y){ return [2*x+1-E(-x-y),1-E(-x-y)]; }, h:function(x,y){ var e=E(-x-y); return [[2+e,e],[e,e]]; }, box:[-1.5,1.5,-1.5,1.5], crit:[[0,0]] },
     { n:'y²·3ˣ  (Blatt 14.3c, a line of minima)', f:function(x,y){ return y*y*Math.pow(3,x); }, g:function(x,y){ return [Math.log(3)*y*y*Math.pow(3,x),2*y*Math.pow(3,x)]; }, h:function(x,y){ var l=Math.log(3), p=Math.pow(3,x); return [[l*l*y*y*p,2*l*y*p],[2*l*y*p,2*p]]; }, box:[-2,1.5,-1.5,1.5], crit:[] },
-    { n:'sin x · cos y', f:function(x,y){ return Math.sin(x)*Math.cos(y); }, g:function(x,y){ return [Math.cos(x)*Math.cos(y),-Math.sin(x)*Math.sin(y)]; }, h:function(x,y){ return [[-Math.sin(x)*Math.cos(y),-Math.cos(x)*Math.sin(y)],[-Math.cos(x)*Math.sin(y),-Math.sin(x)*Math.cos(y)]]; }, box:[-3.2,3.2,-3.2,3.2], crit:[[Math.PI/2,0],[-Math.PI/2,0],[0,Math.PI/2],[0,-Math.PI/2],[Math.PI/2,Math.PI],[-Math.PI/2,Math.PI],[Math.PI/2,-Math.PI],[-Math.PI/2,-Math.PI]] }
+    { n:'sin x · cos y', f:function(x,y){ return Math.sin(x)*Math.cos(y); }, g:function(x,y){ return [Math.cos(x)*Math.cos(y),-Math.sin(x)*Math.sin(y)]; }, h:function(x,y){ return [[-Math.sin(x)*Math.cos(y),-Math.cos(x)*Math.sin(y)],[-Math.cos(x)*Math.sin(y),-Math.sin(x)*Math.cos(y)]]; }, box:[-3.2,3.2,-3.2,3.2], crit:[[Math.PI/2,0],[-Math.PI/2,0],[0,Math.PI/2],[0,-Math.PI/2],[Math.PI/2,Math.PI],[-Math.PI/2,Math.PI],[Math.PI/2,-Math.PI],[-Math.PI/2,-Math.PI],[Math.PI,Math.PI/2],[-Math.PI,Math.PI/2],[Math.PI,-Math.PI/2],[-Math.PI,-Math.PI/2]] }
   ];
   var sel=document.getElementById('c11-f'), svg=document.getElementById('c11-plot'); var P=null;
   F.forEach(function(f,i){ var o=document.createElement('option'); o.value=i; o.textContent=f.n; sel.appendChild(o); });
@@ -8854,7 +8855,7 @@ G.inits.ch11 = function(sec){
     if (!Fn.crit.length) html+='<li>the whole line y = 0 (every point is a global min, since f ≥ 0 = f(x, 0)); the Hessian there has eigenvalues 0 and 2·3ˣ, so the test alone is inconclusive.</li>';
     Fn.crit.forEach(function(p){ var H=Fn.h(p[0],p[1]), ev=eig(H); html+='<li>('+G.fmt(p[0],3)+', '+G.fmt(p[1],3)+'): H = [['+G.fmt(H[0][0],2)+', '+G.fmt(H[0][1],2)+'], ['+G.fmt(H[1][0],2)+', '+G.fmt(H[1][1],2)+']], eigenvalues '+G.fmt(ev[0],2)+', '+G.fmt(ev[1],2)+': '+classify(ev)+'</li>'; });
     html+='</ul>';
-    if (P){ var g2=Fn.g(P[0],P[1]), H2=Fn.h(P[0],P[1]); html+='<p><b>At the clicked point</b> ('+G.fmt(P[0],2)+', '+G.fmt(P[1],2)+'): f = '+G.fmt(Fn.f(P[0],P[1]),3)+', ∇f = ('+G.fmt(g2[0],3)+', '+G.fmt(g2[1],3)+'). The arrow points in the direction of steepest ascent and crosses the contour lines at right angles.</p>'; }
+    if (P){ var g2=Fn.g(P[0],P[1]), H2=Fn.h(P[0],P[1]); html+='<p><b>At the clicked point</b> ('+G.fmt(P[0],2)+', '+G.fmt(P[1],2)+'): f = '+G.fmt(Fn.f(P[0],P[1]),3)+', ∇f = ('+G.fmt(g2[0],3)+', '+G.fmt(g2[1],3)+'). The arrow points in the direction of steepest ascent and is perpendicular to the contour lines (visibly so when both axes have the same scale).</p>'; }
     else html+='<p class="muted">Click the map to inspect a point.</p>';
     document.getElementById('c11-text').innerHTML=html;
   }
@@ -9268,7 +9269,7 @@ G.inits.ch12 = function(sec){
         if (Math.abs(b)<1e-12){ fail='b = 0: then y = const already solves the homogeneous equation, so a polynomial of the same degree cannot work — multiply the ansatz by x (resonance; beyond what the course asks).'; }
         else {
           var A2=deg===2?p2/b:0, A1=deg>=1?(p1-2*a*A2)/b:0, A0=(p0-a*A1-2*A2)/b;
-          ans=deg===2?'y = Ax² + Bx + C, y′ = 2Ax + B, y″ = 2A':(deg===1?'y = Ax + B, y′ = A, y″ = 0':'y = C (a constant)');
+          ans=deg===2?'y = Ax² + Bx + C, y′ = 2Ax + B, y″ = 2A':(deg===1?'y = Bx + C, y′ = B, y″ = 0':'y = C (a constant)');
           if (deg===2){ eqs.push('x²: '+poly([b],['A'])+' = '+frac(p2)+'  ⇒  A = '+frac(A2)); }
           if (deg>=1){ eqs.push('x: '+(deg===2?poly([2*a,b],['A','B']):poly([b],['B']))+' = '+frac(p1)+'  ⇒  B = '+frac(A1)); }
           eqs.push('1: '+(deg===2?poly([2,a,b],['A','B','C']):(deg===1?poly([a,b],['B','C']):poly([b],['C'])))+' = '+frac(p0)+'  ⇒  C = '+frac(A0));
